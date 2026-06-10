@@ -143,6 +143,20 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
 /* ── Hero right ─────────────────────────────────────────────── */
 .fra-hero-right { display: flex; flex-direction: column; gap: 12px; }
 
+/* ── Hero photo placeholder (replace with real image when available) ── */
+.fra-hero-photo {
+  border-radius: 12px; overflow: hidden;
+  border: 1px dashed rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.02);
+  aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-tertiary); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.04em; text-align: center; line-height: 1.6;
+}
+.fra-hero-photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
 .fra-stat-card {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.09);
@@ -272,11 +286,14 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
   box-shadow: var(--shadow-sm);
 }
 .fra-cmu-logo {
-  background: var(--navy); color: #fff; font-size: 11px; font-weight: 700;
-  padding: 10px 14px; border-radius: 8px; white-space: nowrap;
-  letter-spacing: 0.05em; flex-shrink: 0; line-height: 1.55;
+  flex-shrink: 0; width: 140px;
+  background: #fff; border-radius: 8px; overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  border: 1px solid rgba(0,196,245,0.2);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+}
+.fra-cmu-logo img {
+  width: 100%; height: auto; display: block;
 }
 .fra-cmu-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--color-text-primary); letter-spacing: -0.01em; }
 .fra-cmu-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.7; }
@@ -391,7 +408,7 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
     <div>
       <div class="fra-eyebrow">Carnegie Mellon Certified · Singapore Exclusive</div>
       <h1 class="fra-h1">Build robots.<br><span>Get certified.</span><br>Own your DSA.</h1>
-      <p class="fra-subhead">A 2-day hands-on robotics bootcamp for ages 10–12 at One-North. Your child leaves with a Carnegie Mellon Robotics Academy certification — the credential Singapore's top secondary schools verify for DSA applications.</p>
+      <p class="fra-subhead">A 2-day robotics bootcamp for ages 10–12. Your child leaves with a Carnegie Mellon Robotics Academy certification — the credential top Singapore secondary schools verify for DSA.</p>
       <div class="fra-cta-group">
         <a href="https://wa.me/6500000000" class="fra-btn-primary">Reserve a seat on WhatsApp →</a>
         <div class="fra-meta">18–19 June · Fusionopolis, One-North · S$680</div>
@@ -399,6 +416,9 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
     </div>
 
     <div class="fra-hero-right">
+      <!-- TODO: replace this placeholder with a photo of kids in session -->
+      <div class="fra-hero-photo">Photo coming soon</div>
+
       <div class="fra-countdown-card">
         <div class="fra-countdown-label">Bootcamp starts in</div>
         <div class="fra-countdown-grid">
@@ -428,17 +448,6 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
         </div>
       </div>
 
-      <div class="fra-stat-card">
-        <div class="fra-stat-label">Certification</div>
-        <div class="fra-stat-value">Carnegie Mellon</div>
-        <div class="fra-stat-sub">Robotics Academy · <span class="fra-stat-accent">Singapore exclusive partner</span></div>
-      </div>
-
-      <div class="fra-stat-card">
-        <div class="fra-stat-label">DSA advantage</div>
-        <div class="fra-stat-value">Verifiable record</div>
-        <div class="fra-stat-sub">Schools check robotevents.com in under 2 minutes</div>
-      </div>
     </div>
   </div>
 
@@ -447,43 +456,43 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
   <div class="fra-section">
     <div class="fra-section-label">What your child will gain</div>
     <h2 class="fra-section-title">Two days. Real skills. Real credentials.</h2>
-    <p class="fra-section-sub">Hands-on robotics education built on Carnegie Mellon's research-backed curriculum — the same framework used by thousands of educators worldwide.</p>
+    <p class="fra-section-sub">Built on Carnegie Mellon's research-backed curriculum — the same framework used by educators worldwide.</p>
 
     <div class="fra-cards">
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-cpu" aria-hidden="true"></i></div>
         <div class="fra-card-title">VEX IQ robotics</div>
-        <div class="fra-card-body">Build and program real robots from scratch. Sensors, motors, and logic — hands-on from hour one.</div>
+        <div class="fra-card-body">Build and program real robots. Sensors, motors, logic — hands-on from hour one.</div>
         <div class="fra-card-badge">Hands-on</div>
       </div>
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
         <div class="fra-card-title">Computational thinking</div>
-        <div class="fra-card-body">Problem decomposition, algorithmic design, and systematic debugging — skills assessed in DSA interviews.</div>
+        <div class="fra-card-body">Decomposition, algorithmic design, debugging — the thinking skills DSA panels assess.</div>
         <div class="fra-card-badge">DSA-relevant</div>
       </div>
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-certificate" aria-hidden="true"></i></div>
         <div class="fra-card-title">CMU certification</div>
-        <div class="fra-card-body">Leave with an official Carnegie Mellon Robotics Academy certificate — independently verifiable, internationally recognised.</div>
+        <div class="fra-card-body">Official Carnegie Mellon Robotics Academy certificate — independently verifiable, internationally recognised.</div>
         <div class="fra-card-badge">Certified</div>
       </div>
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
         <div class="fra-card-title">Small cohort</div>
-        <div class="fra-card-body">12 seats maximum. Every child gets direct attention from certified instructors throughout both days.</div>
+        <div class="fra-card-body">Every child gets direct attention from certified instructors throughout both days.</div>
         <div class="fra-card-badge">Max 12 kids</div>
       </div>
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-notebook" aria-hidden="true"></i></div>
         <div class="fra-card-title">Engineering notebook</div>
-        <div class="fra-card-body">Students document design decisions — exactly the format DSA panels at top schools look for in portfolios.</div>
+        <div class="fra-card-body">Students document design decisions in the format DSA panels at top schools look for.</div>
         <div class="fra-card-badge">Portfolio-ready</div>
       </div>
       <div class="fra-card">
         <div class="fra-card-icon"><i class="ti ti-trending-up" aria-hidden="true"></i></div>
         <div class="fra-card-title">Pathway to more</div>
-        <div class="fra-card-body">Bootcamp graduates can continue on the full certification track and compete in VEX IQ national championships.</div>
+        <div class="fra-card-body">Continue on the full certification track and compete in VEX IQ national championships.</div>
         <div class="fra-card-badge">Ongoing</div>
       </div>
     </div>
@@ -498,8 +507,8 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
     <div class="fra-dsa-block">
       <div>
         <div class="fra-dsa-title">What top schools actually check</div>
-        <p class="fra-dsa-body">DSA selection panels at Singapore's most competitive secondary schools verify competition records and certifications directly. A Carnegie Mellon certificate combined with a VEX IQ competition record is one of the strongest portfolio combinations a Primary school student can present for Computing and Robotics DSA tracks.</p>
-        <p class="fra-dsa-body" style="margin-top: 12px;">The certification record is independently verifiable — selectors don't take your word for it. That's what makes it valuable.</p>
+        <p class="fra-dsa-body">Selection panels at top secondary schools verify competition records and certifications directly. A CMU certificate plus a VEX IQ record is one of the strongest DSA portfolio combinations for Computing and Robotics tracks.</p>
+        <p class="fra-dsa-body" style="margin-top: 12px;">It's independently verifiable — selectors don't take your word for it. That's what makes it valuable.</p>
       </div>
       <div>
         <div class="fra-dsa-title">Schools with Robotics DSA tracks</div>
@@ -516,10 +525,12 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
     </div>
 
     <div class="fra-cmu-block">
-      <div class="fra-cmu-logo">CMU<br>ROBOTICS<br>ACADEMY</div>
+      <div class="fra-cmu-logo">
+        <img src="assets/cmu-logo.png" alt="Carnegie Mellon Robotics Academy — Official Education Partner">
+      </div>
       <div>
-        <div class="fra-cmu-title">Official Carnegie Mellon Robotics Academy Partner — Singapore & Indonesia</div>
-        <div class="fra-cmu-body">Future Ready Academy is the only organisation in Singapore and Indonesia authorised by Carnegie Mellon University Robotics Academy to deliver K-12 certifications. This is not a franchise or a licensed name — it is a direct partnership with one of the world's top-ranked engineering universities.</div>
+        <div class="fra-cmu-title">Official Partner — Singapore &amp; Indonesia</div>
+        <div class="fra-cmu-body">The only organisation in Singapore and Indonesia authorised by Carnegie Mellon University to deliver K-12 robotics certifications. A direct partnership — not a franchise.</div>
       </div>
     </div>
   </div>
@@ -591,23 +602,23 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
     <div class="fra-faq">
       <div class="fra-faq-item">
         <div class="fra-faq-q">Does my child need prior robotics experience?</div>
-        <div class="fra-faq-a">No. The bootcamp is designed for ages 10–12 with no prior experience. We start from fundamentals on Day 1 and progress to the certification assessment by Day 2. Kids who are curious and willing to try are ready.</div>
+        <div class="fra-faq-a">No. We start from fundamentals on Day 1 and progress to the certification assessment by Day 2. Curious and willing is all they need.</div>
       </div>
       <div class="fra-faq-item">
         <div class="fra-faq-q">What exactly is the Carnegie Mellon certification?</div>
-        <div class="fra-faq-a">It is an official certification issued by the Carnegie Mellon Robotics Academy (CMRA), verifying that your child has demonstrated competency in coding and computational thinking with VEX IQ robotics. Future Ready Academy is the only CMRA-authorised partner in Singapore — your child's certificate comes directly from Carnegie Mellon University.</div>
+        <div class="fra-faq-a">An official Carnegie Mellon Robotics Academy certification verifying competency in coding and computational thinking with VEX IQ. Future Ready Academy is the only CMRA-authorised partner in Singapore — your child's certificate comes directly from CMU.</div>
       </div>
       <div class="fra-faq-item">
         <div class="fra-faq-q">How does this help with DSA applications?</div>
-        <div class="fra-faq-a">DSA panels at schools like SST, Hwa Chong, and Raffles verify robotics credentials directly. A CMU certification combined with a documented VEX IQ learning record is one of the strongest portfolio items a primary school student can present for Computing and Robotics DSA tracks.</div>
+        <div class="fra-faq-a">DSA panels at SST, Hwa Chong, and Raffles verify credentials directly. A CMU certification plus a VEX IQ record is one of the strongest portfolio items for Computing and Robotics DSA tracks.</div>
       </div>
       <div class="fra-faq-item">
         <div class="fra-faq-q">What happens after the bootcamp?</div>
-        <div class="fra-faq-a">Graduates can continue on Future Ready Academy's full robotics programme, building toward VEX IQ competition participation and higher-level CMU certifications. Every bootcamp seat includes a free post-bootcamp pathway consultation to plan your child's next steps.</div>
+        <div class="fra-faq-a">Graduates can continue on the full robotics programme toward VEX IQ competitions and higher CMU certifications. Every seat includes a free pathway consultation.</div>
       </div>
       <div class="fra-faq-item">
         <div class="fra-faq-q">Why only 12 seats?</div>
-        <div class="fra-faq-a">The Carnegie Mellon curriculum requires hands-on assessment. We keep cohorts small so every child receives direct instructor attention and a meaningful certification — not a participation certificate handed to 50 kids in a hall.</div>
+        <div class="fra-faq-a">Hands-on assessment requires small groups. Every child gets direct instructor attention and a meaningful certification — not a participation certificate handed to 50 kids in a hall.</div>
       </div>
     </div>
   </div>
