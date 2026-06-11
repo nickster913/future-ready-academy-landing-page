@@ -385,7 +385,18 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
 .fra-footer-btn:hover { background: #18896A; transform: translateY(-1px); }
 .fra-footer-meta { font-size: 12px; color: rgba(255,255,255,0.3); }
 
+/* ── Hero inline seats badge ─────────────────────────────────── */
+.fra-hero-seats-badge {
+  display: none;
+  font-size: 12px; font-weight: 600; color: var(--teal);
+  margin-bottom: 10px; letter-spacing: -0.01em;
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .fra-nav-badge { display: none; }
+  .fra-hero-seats-badge { display: block; }
+}
 @media (max-width: 680px) {
   .fra-hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.25rem; }
   .fra-cards { grid-template-columns: 1fr; }
@@ -414,6 +425,7 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
       <h1 class="fra-h1">Build robots.<br><span>Get certified.</span><br>Own your DSA.</h1>
       <p class="fra-subhead">Get your child ahead of 2027 DSA applications — while other parents are still waiting.</p>
       <div class="fra-cta-group">
+        <div class="fra-hero-seats-badge">🟢 Limited to 12 seats · 4 spots remaining</div>
         <a href="https://wa.me/6597767687" class="fra-btn-primary">Reserve a seat on WhatsApp →</a>
         <div class="fra-meta">25–26 June · Fusionopolis, One-North · S$680</div>
       </div>
