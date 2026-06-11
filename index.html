@@ -50,7 +50,10 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
   box-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 2px 20px rgba(0,0,0,0.5);
 }
 .fra-nav-logo {
-  font-size: 15px; font-weight: 600; letter-spacing: -0.02em; color: var(--color-text-primary);
+  display: flex; align-items: center;
+}
+.fra-nav-logo img {
+  height: 36px; width: auto; display: block;
 }
 .fra-nav-badge {
   font-size: 11px; background: rgba(0,196,245,0.10); color: var(--cyan);
@@ -400,7 +403,7 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; backg
 
 <div class="fra-page">
   <nav class="fra-nav">
-    <div class="fra-nav-logo">Future Ready Academy</div>
+    <div class="fra-nav-logo"><img src="assets/fra-logo.png" alt="Future Ready Academy"></div>
     <div class="fra-nav-badge">Limited to 12 seats</div>
     <a href="https://wa.me/6597767687" class="fra-nav-cta">Book Now</a>
   </nav>
